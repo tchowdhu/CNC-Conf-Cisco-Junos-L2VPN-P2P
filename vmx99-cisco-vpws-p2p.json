@@ -1,0 +1,75 @@
+{
+  "ietf-l2vpn-ntw:l2vpn-ntw": {
+    "vpn-services": {
+      "vpn-service": [
+        {
+          "vpn-id": "TEST",
+          "vpn-type": "ietf-vpn-common:vpws",
+          "vpn-nodes": {
+            "vpn-node": [
+              {
+                "vpn-node-id": "Node-4",
+                "signaling-option": {
+                  "ldp-or-l2tp": {
+                    "pw-peer-list": [
+                      {
+                        "peer-addr": "198.19.1.99",
+                        "vc-id": 101
+                      }
+                    ]
+                  }
+                },
+                "vpn-network-accesses": {
+                  "vpn-network-access": [
+                    {
+                      "id": "101",
+                      "interface-id": "GigabitEthernet0/0/0/1",
+                      "connection": {
+                        "encapsulation": {
+                          "encap-type": "ietf-vpn-common:dot1q",
+                          "dot1q": {
+                            "cvlan-id": 512
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "vpn-node-id": "vmx99",
+                "signaling-option": {
+                  "ldp-or-l2tp": {
+                    "pw-peer-list": [
+                      {
+                        "peer-addr": "198.19.1.4",
+                        "vc-id": 101
+                      }
+                    ]
+                  }
+                },
+                "vpn-network-accesses": {
+                  "vpn-network-access": [
+                    {
+                      "id": "101",
+                      "interface-id": "GigabitEthernet0/0/1",
+                      "connection": {
+                        "encapsulation": {
+                          "encap-type": "ietf-vpn-common:dot1q",
+                          "dot1q": {
+                            "cvlan-id": 512
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "cisco-l2vpn-ntw:control-word": "yes"
+        }
+      ]
+    }
+  }
+}
