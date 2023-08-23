@@ -1,7 +1,7 @@
 # CNC-Conf-Cisco-Junos-L2VPN-P2P
 This is an example for provisioning a point-to-point (p2p) l2vpn/l2circuit service between juniper mx and cisco ios-xr router using Crosswork Network Controller (CNC).
 
-CNC provides ieft standard l2vpn tsdn core funcion package (CFP) leveraging NSO. This CFP can be extended to configure services in mulivendor enviroment without any extra development work for visualizing in CNC, i.e the visualization of the service work automatically in the topology view. In this example this is between a Juniper MX and a Cisco XR router. We leverage dCloud kitchen sink session the routers are juniper vmx and cisco ios-xrv9K (CML) routers. 
+CNC provides ieft standard l2vpn tsdn core funcion package (CFP) leveraging NSO. This CFP can be extended to configure services in mulivendor enviroment without any extra development work for visualizing in CNC, i.e the visualization of the service work automatically in the topology view. In this example this is between a Juniper MX and a Cisco XR router. We leverage dCloud kitchen sink session, the devices used here are juniper vmx and cisco ios-xrv9K (CML) routers. 
 
 # Configuration Example for l2vpn p2p (in CNC, the option is VPWS): 
 
