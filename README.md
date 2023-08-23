@@ -193,7 +193,7 @@ https://cisco.sharepoint.com/sites/AmericasMIGArchitecture/_layouts/15/stream.as
 
 Feel free to use/edit this and add to the tsdn-juniper package.
 
-# Note for developers/BU:
+# Note for Users:
 
 </br>For quick usability, added the "flat-l2vpn-juniper" folder with all those modification mentioned above. Users can just import it, add to the nso package folder and install it for provisioning.
 </br> Perform the cisco-flat-L2vpn-fp-internal related modifcation though as stated above.
