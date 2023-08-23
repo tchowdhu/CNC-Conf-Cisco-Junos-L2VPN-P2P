@@ -60,7 +60,7 @@ set protocols mpls label-switched-path lsp_to_pe2 to 198.19.1.4
 
 </br> 2. Copy the "flat-l2vpn-juniper"  folder into the package folder for your NSO enviroment. Follow the **Installation** section of that repository to install the "flat-l2vpn-juniper" package.
 
-</br> 3. Using the juniper config systax stated in the above example, use NSO cli to config the commands and use ***commit dry-run outformat xml*** to get the configuration template and replace the required parameters with input variable.
+</br> 3. Using the juniper config syntax stated in the above example, use NSO cli to config the commands and use ***commit dry-run outformat xml*** to get the configuration template and replace the required parameters with input variable.
 
 </br> 4. Save the config templete inside ***~/ncs-run/packages/flat-l2vpn-juniper/templates*** folder as ***cisco-flat-L2vpn-fp-junos-p2p-l2circuit-template.xml***. 
 </br> This file has been added with this repository.
@@ -89,7 +89,7 @@ class Junos:
 
 </br> This file has been added in this repository.
 
-</br> 5. To make this example work, we had to modify some template for NSO Core Function Package for L2vpn (**cisco-flat-L2vpn-fp-internal**). 
+</br> 6. To make this example work, we had to modify some template for NSO Core Function Package for L2vpn (**cisco-flat-L2vpn-fp-internal**). 
 </br>    i. Go to the folder ***~/ncs-run/packages/cisco-flat-L2vpn-fp-internal/templates***.
 </br>   ii. Edit both ***cisco-flat-L2vpn-fp-cli-evpn-vpws-template.xml*** and ***cisco-flat-L2vpn-fp-cli-p2p-template.xml*** with the content below:
 
@@ -109,7 +109,7 @@ class Junos:
           ......< skipping some sections>.....
         </l2vpn>
 
-</br> 6. Reload the packages in NSO (***packages reload***)
+</br> 7. Reload the packages in NSO (***packages reload***)
 
 # Provision P2P L2VPN service between Juniper and Cisco devices in CNC.
 
