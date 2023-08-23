@@ -115,22 +115,27 @@ class Junos:
 
 </br> 1. Select L2VPN under Services Section.
 </br>
-<img width="1447" alt="image" src="https://wwwin-github.cisco.com/storage/user/8167/files/eaf94678-e722-431b-b74b-9c118a862224">
+![image](https://github.com/tchowdhu/CNC-Conf-Cisco-Junos-L2VPN-P2P/assets/39807939/ff6001d9-59ac-4029-a199-d761a79255ac)
+
 
 </br> 2. Either use GUI hitting "+" sign or import a configuation file in json format. 
 </br>
-<img width="817" alt="image" src="https://wwwin-github.cisco.com/storage/user/8167/files/85d3a894-b29d-4578-87a2-a83de42f9ed0">
+![image](https://github.com/tchowdhu/CNC-Conf-Cisco-Junos-L2VPN-P2P/assets/39807939/6669cdd8-b40d-4a2b-9f36-c576d2d05666)
+
 
 </br> 3. We will import a json configuration file for the service. The json file has been added in this repository.
 </br>
-<img width="463" alt="image" src="https://wwwin-github.cisco.com/storage/user/8167/files/4d6b4611-32d4-47f7-ba03-9d9fbcde4969">
+![image](https://github.com/tchowdhu/CNC-Conf-Cisco-Junos-L2VPN-P2P/assets/39807939/751a759a-2fa9-4a93-93e8-7baaf85f674d)
 
-</br> 4. Check the imported parameters and hit "commit changes" ( optional, also can do a dry-run before commit)
+
+</br> 4. Check the imported parameters and hit "commit changes" ( optional, also can do a dry-run before commit).
 </br>
-<img width="1706" alt="image" src="https://wwwin-github.cisco.com/storage/user/8167/files/7f408fa4-3df7-49bc-9acb-e1e03877504e">
+![image](https://github.com/tchowdhu/CNC-Conf-Cisco-Junos-L2VPN-P2P/assets/39807939/7792b16a-2876-49c5-91f3-33500ebf4d45)
+
 
 </br> 5. Visualize the service in CNC:
-</br> ![image](https://wwwin-github.cisco.com/storage/user/8167/files/7d8cac87-449a-4c99-a919-44d2bbf405c1)
+</br> ![image](https://github.com/tchowdhu/CNC-Conf-Cisco-Junos-L2VPN-P2P/assets/39807939/e636c3fa-6b63-4cd1-9f68-cd008c24a41b)
+
 
 # Verifying ouput on routers:
 
