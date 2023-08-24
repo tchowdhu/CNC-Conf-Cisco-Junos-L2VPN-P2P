@@ -1,7 +1,7 @@
 # CNC-Conf-Cisco-Junos-L2VPN-P2P
-This is an example for provisioning a point-to-point (p2p) l2vpn/l2circuit service between juniper mx and cisco ios-xr router using Crosswork Network Controller (CNC).
+This is an example of provisioning a point-to-point (p2p) l2vpn/l2circuit service between Juniper MX and Cisco IOS-XR router using Crosswork Network Controller (CNC).
 
-CNC provides ieft standard l2vpn tsdn core funcion package (CFP) leveraging NSO. This CFP can be extended to configure services in mulivendor enviroment without any extra development work for visualizing in CNC, i.e the visualization of the service work automatically in the topology view. In this example this is between a Juniper MX and a Cisco XR router. We leverage dCloud kitchen sink session, the devices used here are juniper vmx and cisco ios-xrv9K (CML) routers. 
+CNC provides ieft standard l2vpn TSDN core function package (CFP) leveraging NSO. This CFP can be extended to configure services in multivendor environment without any extra development work for visualizing in CNC, i.e. the visualization of the service works automatically in the topology view. In this example, this is between a Juniper MX and a Cisco XR router. We leverage dCloud kitchen sink session, the devices used here are Juniper MX and Cisco ios-xrv9K (CML) routers. 
 
 # Configuration Example for l2vpn p2p (in CNC, the option is VPWS): 
 
@@ -48,23 +48,23 @@ set protocols mpls label-switched-path lsp_to_pe2 to 198.19.1.4
 
 # Enviroment Setup:
 
-</br> **o** Requires mulivendor enviroment. In this case we need a network with cisco xr routers and juniper mx routers.
-</br> **o** Users can create their environment in the lab with juniper vmx and vXR-9K or CML (Cisco Modeling Lab).
+</br> **o** Requires mulivendor enviroment. In this case, we need a network with cisco xr routers and juniper mx routers.
+</br> **o** Users can create their environment in the lab with juniper VMX and vXR-9K or CML (Cisco Modeling Lab).
 </br> **o** Install CNC, CDG, SR-PCE, NSO (with CNC core function packs).
-</br> **o** In this case, we used dCloud kitchen sink demo session (custom content), which has all CNC enviroment installed and Cisco-Juniper network prepared.
+</br> **o** In this case, we used dCloud kitchen sink demo session (custom content), which has all CNC environments installed and Cisco-Juniper network prepared.
 
 # Steps to make it work with CNC:
 
 </br> 1. Git clone the repository the Cisco Automation BU prepared (tsdn-juniper) in your NSO VM.
 </br> https://github.com/maddn/tsdn-juniper.git
-</br> We will be extending this tsdn-juniper repository for l2vpn configuration and add it into our current repository here.
+</br> We will be extending this tsdn-juniper repository for l2vpn configuration and adding it to our current repository here.
 
-</br> 2. Copy the "flat-l2vpn-juniper"  folder into the package folder for your NSO enviroment. Follow the **Installation** section of that repository to install the "flat-l2vpn-juniper" package.
+</br> 2. Copy the "flat-l2vpn-juniper"  folder into the package folder for your NSO environment. Follow the **Installation** section of that repository to install the "flat-l2vpn-juniper" package.
 
-</br> 3. Using the juniper config syntax stated in the above example, use NSO cli to config the commands and use ***commit dry-run outformat xml*** to get the configuration template and replace the required parameters with input variable.
+</br> 3. Using the juniper config syntax stated in the above example, use NSO cli to configure the commands and use ***commit dry-run outformat xml*** to get the configuration template and replace the required parameters with the input variable.
 
 </br> 4. Save the config templete inside ***~/ncs-run/packages/flat-l2vpn-juniper/templates*** folder as ***cisco-flat-L2vpn-fp-junos-p2p-l2circuit-template.xml***. 
-</br> This file has been added with this repository.
+</br> This file has been added to our current repository.
 
 </br> 5. Go to the folder ***~/ncs-run/packages/flat-l2vpn-juniper/python/flat_l2vpn_juniper*** and edit the ***Junos.py*** to add the p2p section inside the ***def conf_l2vpn(self, site, local):*** function.
 
@@ -88,9 +88,9 @@ class Junos:
        """ End of section """
 </code></pre>
 
-</br> This file has been added in this repository.
+</br> This file has been added to our current repository.
 
-</br> 6. To make this example work, we had to modify some template for NSO Core Function Package for L2vpn (**cisco-flat-L2vpn-fp-internal**). 
+</br> 6. To make this example work, we had to modify some templates for the NSO Core Function Package for L2vpn (**cisco-flat-L2vpn-fp-internal**). 
 </br>    i. Go to the folder ***~/ncs-run/packages/cisco-flat-L2vpn-fp-internal/templates***.
 </br>   ii. Edit both ***cisco-flat-L2vpn-fp-cli-evpn-vpws-template.xml*** and ***cisco-flat-L2vpn-fp-cli-p2p-template.xml*** with the content below:
 
@@ -124,7 +124,7 @@ class Junos:
 ![image](https://github.com/tchowdhu/CNC-Conf-Cisco-Junos-L2VPN-P2P/assets/39807939/6669cdd8-b40d-4a2b-9f36-c576d2d05666)
 
 
-</br> 3. We will import a json configuration file for the service. The json file has been added in this repository.
+</br> 3. We will import a json configuration file for the service. The json file has been added in our current repository.
 </br>
 ![image](https://github.com/tchowdhu/CNC-Conf-Cisco-Junos-L2VPN-P2P/assets/39807939/751a759a-2fa9-4a93-93e8-7baaf85f674d)
 
@@ -138,7 +138,7 @@ class Junos:
 </br> ![image](https://github.com/tchowdhu/CNC-Conf-Cisco-Junos-L2VPN-P2P/assets/39807939/e636c3fa-6b63-4cd1-9f68-cd008c24a41b)
 
 
-# Verifying ouput on routers:
+# Verifying output on routers:
 
 ## Cisco IOS-XR (show l2vpn xconnect):
 
@@ -192,12 +192,12 @@ https://cisco.sharepoint.com/sites/AmericasMIGArchitecture/_layouts/15/stream.as
 
 # Note for developers/BU:
 
-Feel free to use/edit this and add to the tsdn-juniper package.
+Feel free to use/edit this and add it to the tsdn-juniper package.
 
 # Note for Users:
 
-</br>For quick usability, added the "flat-l2vpn-juniper" folder with all those modification mentioned above. Users can just import it, add to the nso package folder and install it for provisioning.
-</br> Perform the cisco-flat-L2vpn-fp-internal related modifcation though as stated above.
+</br>For quick usability, added the "flat-l2vpn-juniper" folder with all those modification mentioned above. Users can just import it, add it to the nso package folder, and install it for provisioning.
+</br> Perform the cisco-flat-L2vpn-fp-internal related modification though as stated above.
 
 # Credits (Contributions):
 
