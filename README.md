@@ -57,6 +57,7 @@ set protocols mpls label-switched-path lsp_to_pe2 to 198.19.1.4
 
 </br> 1. Git clone the repository the Cisco Automation BU prepared (tsdn-juniper) in your NSO VM.
 </br> https://github.com/maddn/tsdn-juniper.git
+</br> We will be extending this tsdn-juniper repository for l2vpn configuration and add it into our current repository here.
 
 </br> 2. Copy the "flat-l2vpn-juniper"  folder into the package folder for your NSO enviroment. Follow the **Installation** section of that repository to install the "flat-l2vpn-juniper" package.
 
