@@ -1,0 +1,12 @@
+                <preferred-path when="{sr-te/preferred-path/policy or rsvp-te/preferred-path}">
+                  <?if {sr-te/preferred-path/policy}?>
+                    <sr-te>
+                      <policy>{$SR_POLICY_NAME}</policy>
+                      <fallback>{sr-te/preferred-path/fallback}</fallback>
+                    </sr-te>
+                  <?else?>
+                    <interface>tunnel-te</interface>
+                    <id>{rsvp-te/preferred-path/te-tunnel-id}</id>
+                    <fallback>{rsvp-te/preferred-path/fallback}</fallback>
+                  <?end?>
+                </preferred-path>
