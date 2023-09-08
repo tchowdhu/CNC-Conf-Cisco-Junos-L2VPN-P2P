@@ -112,7 +112,7 @@ class Junos:
 
 </br> 7. Reload the packages in NSO (***packages reload***)
 
-</br> 8. Enable ***protocols ldp interface lo0.0***.
+</br> 8. Enable ***protocols ldp interface lo0.0*** under vmx99 device (juniper) using NSO CLI.
 </br> <img width="586" alt="image" src="https://github.com/tchowdhu/CNC-Conf-Cisco-Junos-L2VPN-P2P/assets/39807939/4485322b-5780-42fa-931c-8178915d0eb9">
 
 
