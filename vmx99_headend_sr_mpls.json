@@ -1,0 +1,27 @@
+{
+  "cisco-sr-te-cfp:sr-te": {
+    "cisco-sr-te-cfp-sr-policies:policies": {
+      "policy": [
+        {
+          "name": "vmx99_xr4",
+          "head-end": [
+            {
+              "name": "vmx99"
+            }
+          ],
+          "tail-end": "198.19.1.4",
+          "color": 55,
+          "path": [
+            {
+              "preference": 101,
+              "dynamic": {
+                "pce": {},
+                "metric-type": "igp"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
